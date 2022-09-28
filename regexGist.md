@@ -27,15 +27,18 @@ This regex has two Anchors a beginning`(^)` and an end`($)`.
 
 ### Quantifiers
 
-The first two character sets have plus`(+)` Quantifiers to match one or more of the preceding tokens and for the third character set it has `{2,6}` Quantifiers to match between 2-6 of the preceding tokens.
+The first two character sets have plus`(+)` Quantifiers to match one or more of the preceding tokens and
+ for the third character set it has `{2,6}` Quantifiers to match between 2-6 of the preceding tokens.
 
 ### Grouping Constructs
 
-This regex has 3 capturing groups first take in your email`([a-z0-9_\.-]+)` second takes in email provider`([\da-z\.-]+)` and the third takes in the domain extension`[a-z\.]`.
+This regex has 3 capturing groups first take in your email`([a-z0-9_\.-]+)` second takes in email provider`([\da-z\.-]+)` and 
+the third takes in the domain extension`([a-z\.]{2,6})`.
 
 ### Bracket Expressions
 
-the first bracket takes in two ranges from `a-z` and `0-9` also matches these characters `( -, _, . )`. The second bracket takes in a range of `a-z` with `(-, .)` characters available. The third bracket taking a range of `a-z` and an escaped character of `(.)`.
+the first bracket takes in two ranges from `a-z` and `0-9` also matches these characters `( -, _, . )`.
+ The second bracket takes in a range of `a-z` with `(-, .)` characters available. The third bracket taking a range of `a-z` and an escaped character of `(.)`.
 
 ### Character Classes
 
