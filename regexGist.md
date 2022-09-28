@@ -12,50 +12,44 @@ The following regex is designed to collect a valid email:
 
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
-- [OR Operator](#or-operator)
-- [Character Classes](#character-classes)
-- [Flags](#flags)
-- [Grouping and Capturing](#grouping-and-capturing)
+- [Grouping Constructs](#grouping-constructs)
 - [Bracket Expressions](#bracket-expressions)
-- [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+- [Character Classes](#character-classes)
+- [The OR Operator](#the-or-operator)
+- [Flags](#flags)
+- [Character Escapes](#character-escapes)
 
 ## Regex Components
 
 ### Anchors
 
-This regex has two Anchors a beginning(^) and an end($). 
+This regex has two Anchors a beginning`(^)` and an end`($)`.
 
 ### Quantifiers
 
-The first two character sets have plus(+) Quantifiers to match one or more of the preceding tokens and for the third character set it has {2,6} Quantifiers to match between 2-6 of the preceding tokens.
+The first two character sets have plus`(+)` Quantifiers to match one or more of the preceding tokens and for the third character set it has `{2,6}` Quantifiers to match between 2-6 of the preceding tokens.
 
-### OR Operator
+### Grouping Constructs
 
-This regex has none.
-
-### Character Classes
-
-the first character set takes in two ranges from a-z and 0-9 also allows these characters ( -, _, . ). The second character set takes in a digit 0-9 but show as \d then a range of a-z with (-, .)
-
-### Flags
-
-### Grouping and Capturing
-
-This regex has 3 capturing groups first take in your email second takes in email provider and the third takes in the domain extension.
+This regex has 3 capturing groups first take in your email`([a-z0-9_\.-]+)` second takes in email provider`([\da-z\.-]+)` and the third takes in the domain extension`[a-z\.]`.
 
 ### Bracket Expressions
 
-### Greedy and Lazy Match
+the first bracket takes in two ranges from `a-z` and `0-9` also matches these characters `( -, _, . )`. The second bracket takes in a range of `a-z` with `(-, .)` characters available. The third bracket taking a range of `a-z` and an escaped character of `(.)`.
 
-### Boundaries
+### Character Classes
 
-### Back-references
+a digit 0-9 but show as `\d` in the regex also only takes in a single digit.
 
-### Look-ahead and Look-behind
+### The OR Operator
 
-## Author
+This regex has none but is normally a `(|)` symbol.
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+### Flags
+
+this regex has zero flags but some common ones are ignore case`(i)`, global search`(g)`, multiline`(m)`, unicode`(u)`, sticky`(y)`, dotall`(s)`.
+
+
+## Author: William Neal
+
+hope this helps with learning regex(https://github.com/tylerneal27/regex-tutorial)
